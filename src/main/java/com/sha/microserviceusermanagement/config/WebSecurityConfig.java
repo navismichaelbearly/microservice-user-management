@@ -42,8 +42,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
                 .logout().permitAll()
                 .logoutRequestMatcher(new AntPathRequestMatcher("/service/logoout", "POST"))
                 .and()
-                .formLogin().loginPage("/service/login")
-                .and()
+                .formLogin().loginPage("/service/login").and()
                 .httpBasic().and()
                 //cross-side request forgery
                 .csrf().disable();

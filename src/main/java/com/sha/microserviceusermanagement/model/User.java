@@ -7,12 +7,12 @@ import org.hibernate.annotations.GeneratorType;
 import javax.persistence.*;
 
 @Entity
-@Table(name="user")
+@Table(name="user", schema = "public")
 @Data
 public class User {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
     @Column(name = "name")
